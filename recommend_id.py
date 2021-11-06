@@ -19,6 +19,7 @@ def solution(new_id):
 
     length = len(new_id)
     if length <= 2:
+        
         new_string = []
         new_string.append(new_id)
         while len(new_id) < 3:
