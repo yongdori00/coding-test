@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class Solution {
+class newscluteringS {
     public static int solution(String str1, String str2) {
         int answer = 0;
         float same = 0;
@@ -74,10 +74,6 @@ class Solution {
         }
         
         answer = (int) (65536 * same / different);
-        System.out.println(str1set.toString());
-        System.out.println(str2set.toString());
-        System.out.println(same);
-        System.out.println(different);
         return answer;
     }
 
