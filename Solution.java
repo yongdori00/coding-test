@@ -74,14 +74,11 @@ class Solution {
         }
         
         answer = (int) (65536 * same / different);
-        System.out.println(str1set.toString());
-        System.out.println(str2set.toString());
-        System.out.println(same);
-        System.out.println(different);
         return answer;
     }
 
     public static void main(String argv[]) {
         System.out.println(solution("E=M*C^2", "e=m*c^2"));
+        
     }
 }
