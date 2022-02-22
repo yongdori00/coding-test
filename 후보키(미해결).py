@@ -20,15 +20,13 @@ def solution(relation):
                 relation[j].pop(i)
                 answer+=1
 
-    print(relation)
 
-    '''for i in range(len(translist)):
+    for i in range(len(translist)):
         head = i
         for j in range()
         tail+=
         tempcat = []
         translist
-'''
 
     return answer
 
