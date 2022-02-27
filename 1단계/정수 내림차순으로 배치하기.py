@@ -1,8 +1,6 @@
 def solution(n):
     answer = 0
-    print(type(n))
     strN = str(int(n))
-    print(type(n))
     #int 타입으로 한번 더 해줘야함.
     strlist = list(strN)
 
