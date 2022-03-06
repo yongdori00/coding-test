@@ -1,4 +1,4 @@
-from itertools import combinations
+'''from itertools import combinations
 
 def solution(orders, course):
     answer = []
@@ -19,4 +19,26 @@ def solution(orders, course):
     return answer
 
 if __name__ == '__main__':
-    print(solution(["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"],[2,3,4]))
+    print(solution(["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"],[2,3,4]))'''
+
+from itertools import combinations
+
+def solution(orders, course):
+    answer = []
+    orderslist = []
+    coursecomb = {}
+    
+    for i in orders:
+        orderslist.append(list(i))
+    
+    for j in orderslist:
+        for i in course:
+            k = list(combinations(j,i))
+            for m in k:
+                coursecomb[m] = coursecomb.get(m, 0) + 1
+
+    answer.append(list(key for key, value in coursecomb.items() if value > 1))
+    
+    return answer
+
+print(solution(["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"],[2,3,4]))
