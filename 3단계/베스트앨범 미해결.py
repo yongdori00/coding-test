@@ -9,7 +9,11 @@ def solution(genres, plays):
     for key, value in dict_genres.items():
         dict_genres[key] = sorted(dict_genres[key], key = lambda x:(x[1], -x[0]), reverse = True)
 
+    print(dict_genres)
+
     dict_genres = dict(sorted(dict_genres.items(), key = lambda x:x[1][1], reverse = True))
+
+    print(dict_genres)
 
     for key, value in dict_genres.items():
         for i in range(2):
