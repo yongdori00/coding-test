@@ -19,6 +19,7 @@ visited = [False] * 9
 def bfs(graph, v, visited):
     global queue
 
+    # queue는 stack이랑 달리 while문 안에서 동작한다.
     while queue:
         for i in graph[v]:
             if visited[i] is False:

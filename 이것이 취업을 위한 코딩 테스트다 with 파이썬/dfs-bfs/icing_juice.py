@@ -5,11 +5,14 @@ input = sys.stdin.readline
 dx = [0, 1, 0, -1]
 dy = [1, 0, -1, 0]
 
+#이 문제는 구역을 찾으면 되는 문제이다.
+#그러므로 dfs로 해결을 하면 된다.
 def rec(i, j):
     global ice_map, visited
 
     visited[i][j] = True
 
+    #각각의 if문은 동,서.남.북으로 같은 구역인지를 판단하여 맞다면 이동하는 방식으로 동작하게 된다.
     if i + dy[0] < n and ice_map[i + dy[0]][j + dx[0]] == 0 and visited[i + dy[0]][j + dx[0]] == False:
         rec(i + dy[0], j + dx[0])
     if j + dx[1] < m and ice_map[i + dy[1]][j + dx[1]] == 0 and visited[i + dy[1]][j + dx[1]] == False:
