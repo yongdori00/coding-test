@@ -29,7 +29,7 @@ def solution(land):
                 elif max_list[i][3] < max_list[i - 1][1] + land[i][j]:
                     max_list[i][3] = max_list[i - 1][1] + land[i][j]
                     max_list[i][2] = j
-            #합이 제일 큰 길의 인덱스와 같아서 강제로 합이 두번쨰로 큰 길의 인덱스와 더해야하는 경우(max_list[i - 1][2]와 j의 배교)
+            #합이 제일 큰 길의 인덱스와 같아서 강제로 합이 두번쨰로 큰 길의 인덱스와 더해야하는 경우(max_list[i - 1][2]와 j의 비교)
             else:
                 if max_list[i][1] < max_list[i - 1][3] + land[i][j]:
                     max_list[i][3] = max_list[i][1]
